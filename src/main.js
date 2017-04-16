@@ -3,21 +3,9 @@ import App from './App.vue'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
 import VueApollo from 'vue-apollo'
 
-// connect to GraphQL project
-const networkInterface = createNetworkInterface({
-  uri: 'https://api.graph.cool/simple/v1/__PROJECT_ID__',
-})
-
-// The x-graphcool-source header is not necessary for your project
-networkInterface.use([{
-  applyMiddleware (req, next) {
-    if (!req.options.headers) {
-      req.options.headers = {}
-    }
-    req.options.headers['x-graphcool-source'] = 'example:vue-apollo-instagram'
-    next()
-  },
-}])
+// Paste your endpoint for the Simple API here.
+// Info: https://github.com/graphcool-examples/react-apollo-instagram-example#2-create-graphql-api-with-graphcool
+const networkInterface = createNetworkInterface({ uri: '__SIMPLE_API_ENDPOINT__' });
 
 const apolloClient = new ApolloClient({
   networkInterface,
