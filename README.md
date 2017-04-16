@@ -1,17 +1,36 @@
 # vue-apollo-instagram-example
-📷  Instagram clone built with Vue 2 &amp; Apollo
 
-## Getting Started
+* [Vue](https://vuejs.org/): Progressive Javascript framework for building user interfaces 
+* [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
+* [Graphcool](https://www.graph.cool): Flexible backend platform combining GraphQL + AWS Lambda
 
-After [downloading this example](https://github.com/graphcool-examples/vue-apollo-instagram-example/archive/master.zip) please follow these steps.
+## Example ([Live demo](https://demo-vue-apollo-instagram-example.netlify.com) & [GraphQL Playground](https://api.graph.cool/simple/v1/instagram-example))
 
-### 1. Create an account
 
-To run this example, please create a [Graphcool](http://graph.cool) account and **copy your endpoint**. This shouldn't take longer than a minute. We promise!
+![](http://imgur.com/3S6fUeI.gif)
 
-![](http://i.imgur.com/ytXDR4B.gif)
+## Quickstart
 
-This is how our GraphQL data model looks like:
+For more information on how to get started [refer to the full vue-apollo-instagram tutorial](https://www.graph.cool/docs/quickstart/vue-apollo-instagram-example).
+
+### 1. Clone example repository
+
+```sh
+git clone https://github.com/graphcool-examples/vue-apollo-instagram-example.git
+cd vue-apollo-instagram-example
+```
+
+### 2. Create GraphQL API with [`graphcool`](https://www.npmjs.com/package/graphcool)
+
+```sh
+# Install Graphcool CLI
+npm install -g graphcool
+
+# Create a new project based on the Instagram schema
+graphcool init --url graph.cool/schema/instagram 
+```
+
+This creates a GraphQL API for the following schema:
 
 ```graphql
 type Post {
@@ -20,22 +39,27 @@ type Post {
 }
 ```
 
-### 2. Configure app data endpoint
+### 3. Connect the app with your GraphQL API
 
-Open `src/main.js` and paste your endpoint to the following line:
+Copy the `Simple API` endpoint to `./src/main.js` as the `uri` argument in the `createNetworkInterface` call:
 
 ```js
-const networkInterface = createNetworkInterface({ uri: 'https://api.graph.cool/simple/v1/__PROJECT_ID__' })
+// replace `__SIMPLE_API_ENDPOINT__` with the endpoint from the previous step
+const networkInterface = createNetworkInterface({ uri: '__SIMPLE_API_ENDPOINT__' })
 ```
 
-### 3. Run the example
-
-You're done configuring the example application. Please run the following command and open [localhost:3000](http://localhost:3000) in your browser. Have fun exploring! 🎉
+### 4. Install depdendencies & run locally
 
 ```sh
-yarn && yarn start
-# or npm install & npm start
+yarn install
+yarn start # open http://localhost:3000 in your browser
 ```
+
+## Next steps
+
+* [Advanced GraphQL features](x)
+* [Authentication & Permissions](x)
+* [Implementing business logic with serverless functions](x)
 
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
