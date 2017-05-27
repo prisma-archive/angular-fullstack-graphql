@@ -15,7 +15,7 @@ For more information on how to get started [refer to the full angular-apollo-ins
 ### 1. Clone example repository
 
 ```sh
-git clone https://github.com/graphcool-examples/angular.git
+git clone https://github.com/graphcool-examples/angular-graphql.git
 cd angular-graphql/quickstart-with-apollo
 ```
 
