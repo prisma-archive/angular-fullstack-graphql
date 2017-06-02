@@ -39,6 +39,9 @@ A big thank you to all contributors and supporters of this repository 💚
 <a href="https://github.com/marktani/" target="_blank">
   <img src="https://github.com/marktani.png?size=64" width="64" height="64" alt="marktani">
 </a>
+<a href="https://github.com/kamilkisiela/" target="_blank">
+  <img src="https://github.com/kamilkisiela.png?size=64" width="64" height="64" alt="kamilkisiela">
+</a>
 
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
