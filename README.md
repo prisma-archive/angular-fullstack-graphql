@@ -15,7 +15,6 @@ The examples above cover the following technologies:
 * [GraphQL](http://graphql.org/)
 * [Apollo Client](http://dev.apollodata.com/react/)
 * [GraphQL subscriptions](https://www.graph.cool/docs/reference/simple-api/subscriptions-aip7oojeiv/)
-* [File upload](https://www.graph.cool/docs/reference/file-handling/overview-eer4wiang0/)
 * ...
 
 > Are you looking for another example? [Request it here](https://github.com/graphcool-examples/react-graphql/issues/new).
