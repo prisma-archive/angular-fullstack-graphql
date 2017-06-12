@@ -45,9 +45,6 @@ A big thank you to all contributors and supporters of this repository 💚
 <a href="https://github.com/gsans/" target="_blank">
   <img src="https://github.com/gsans.png?size=64" width="64" height="64" alt="gsans">
 </a>
-<a href="https://github.com/stubailo/" target="_blank">
-  <img src="https://github.com/stubailo.png?size=64" width="64" height="64" alt="stubailo">
-</a>
 
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
