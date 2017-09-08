@@ -10,7 +10,6 @@
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
     "target": "es5",
-	"noStrictGenericChecks": true,
     "typeRoots": [
       "../node_modules/@types"
     ]
