@@ -4,6 +4,12 @@
 
 ![](https://imgur.com/LG6r1q1.png)
 
+## TODO
+
+- [ ] update to Apollo 2.0
+- [ ] add automatic UI updates after `createPost` mutation was performed
+- [ ] enable in [https://github.com/graphql-cli/graphql-cli/blob/master/src/cmds/create/boilerplates.ts](https://github.com/graphql-cli/graphql-cli/blob/master/src/cmds/create/boilerplates.ts)
+
 ## Technologies
 
 * **Frontend**
