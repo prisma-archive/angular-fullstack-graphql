@@ -22,7 +22,7 @@
     "@angular/platform-browser": "4.4.6",
     "@angular/platform-browser-dynamic": "4.4.6",
     "@angular/router": "4.4.6",
-    "angular2-moment": "1.7.1",
+    "angular2-moment": "1.8.0",
     "apollo-angular": "0.13.3",
     "apollo-client": "1.9.3",
     "core-js": "2.5.3",
