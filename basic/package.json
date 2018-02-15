@@ -37,6 +37,6 @@
     "@angular/compiler-cli": "4.4.6",
     "codelyzer": "2.1.1",
     "tslint": "4.5.1",
-    "typescript": "2.7.1"
+    "typescript": "2.7.2"
   }
 }
