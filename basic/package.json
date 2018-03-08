@@ -33,7 +33,7 @@
     "zone.js": "0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.3",
+    "@angular/cli": "1.7.3",
     "@angular/compiler-cli": "4.4.6",
     "codelyzer": "2.1.1",
     "tslint": "4.5.1",
