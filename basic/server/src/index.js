@@ -1,41 +1,38 @@
 const { GraphQLServer } = require('graphql-yoga')
-const { Graphcool } = require('graphcool-binding')
+const { Prisma } = require('prisma-binding')
 
 const resolvers = {
   Query: {
     feed(parent, args, ctx, info) {
-      return ctx.db.query.posts(
-        {
-          orderBy: 'createdAt_DESC',
-        },
-        info,
-      )
+      return ctx.db.query.posts({ where: { isPublished: true } }, info)
     },
-    post(parent, args, ctx, info) {
-      return ctx.db.query.post(
-        {
-          where: { id: args.id },
-        },
-        info,
-      )
+    drafts(parent, args, ctx, info) {
+      return ctx.db.query.posts({ where: { isPublished: false } }, info)
+    },
+    post(parent, { id }, ctx, info) {
+      return ctx.db.query.post({ where: { id } }, info)
     },
   },
   Mutation: {
-    createPost(parent, args, ctx, info) {
+    createDraft(parent, { title, text }, ctx, info) {
       return ctx.db.mutation.createPost(
         {
           data: {
-            description: args.description,
-            imageUrl: args.imageUrl,
+            title,
+            text,
           },
         },
         info,
       )
     },
-    deletePost(parent, args, ctx, info) {
-      return ctx.db.mutation.deletePost(
+    deletePost(parent, { id }, ctx, info) {
+      return ctx.db.mutation.deletePost({ where: { id } }, info)
+    },
+    publish(parent, { id }, ctx, info) {
+      return ctx.db.mutation.updatePost(
         {
-          where: { id: args.id },
+          where: { id },
+          data: { isPublished: true },
         },
         info,
       )
@@ -48,10 +45,11 @@ const server = new GraphQLServer({
   resolvers,
   context: req => ({
     ...req,
-    db: new Graphcool({
-      typeDefs: './database/schema.generated.graphql',
-      endpoint: 'http://localhost:60000/graphql-boilerplate/dev',
-      secret: 'mysecret123',
+    db: new Prisma({
+      typeDefs: 'src/generated/prisma.graphql', // the auto-generated GraphQL schema of the Prisma API
+      endpoint: '__PRISMA_ENDPOINT__', // the endpoint of the Prisma API
+      debug: true, // log all GraphQL queries & mutations sent to the Prisma API
+      // secret: 'mysecret123', // only needed if specified in `database/prisma.yml`
     }),
   }),
 })

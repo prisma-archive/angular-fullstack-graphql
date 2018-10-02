@@ -1,25 +1,35 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { RouterModule } from '@angular/router'
-import { ApolloModule } from 'apollo-angular'
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component'
-import { FeedComponent } from './feed.component'
-import { NewPostComponent } from './new-post.component'
-import { routes } from './routes'
-import { provideClient } from './client'
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component';
+import { FeedComponent } from './feed/feed.component';
+import { DraftsComponent } from './drafts/drafts.component';
+import { DetailComponent } from './detail/detail.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
-  declarations: [AppComponent, FeedComponent, NewPostComponent],
-  entryComponents: [AppComponent],
+  declarations: [
+    AppComponent,
+    PostComponent,
+    FeedComponent,
+    DraftsComponent,
+    DetailComponent,
+    CreateComponent
+  ],
   imports: [
     BrowserModule,
-    FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
-    ApolloModule.forRoot(provideClient),
+    FormsModule,
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule
   ],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

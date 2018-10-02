@@ -1,0 +1,12 @@
+<ng-template *ngIf="feed$ | async as posts">
+  <h1>Feed</h1>
+  <app-post *ngFor="let post of posts" [post]="post" [isDraft]="!post.isPublished" (refresh)="refresh()"></app-post>
+</ng-template>
+
+<div *ngIf="loading$ | async" class="flex w-100 h-100 items-center justify-center pt7">
+  <div>Loading ...</div>
+</div>
+
+<div *ngIf="error$ | async" class="flex w-100 h-100 items-center justify-center pt7">
+  <div>An unexpected error occured.</div>
+</div>
