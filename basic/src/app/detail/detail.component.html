@@ -1,0 +1,19 @@
+<ng-template *ngIf="post$ | async as post">
+  <h1 class="f3 black-80 fw4 lh-solid">{{post.title}}</h1>
+  <p class="black-80 fw3">{{post.text}}</p>
+
+  <a class="f6 dim br1 ba ph3 pv2 mb2 dib black pointer" (click)="publish(post)">
+    Publish
+  </a>
+  <a class="f6 dim br1 ba ph3 pv2 mb2 dib black pointer" (click)="delete(post)">
+    Delete
+  </a>
+</ng-template>
+
+<div *ngIf="loading$ | async" class="flex w-100 h-100 items-center justify-center pt7">
+  <div>Loading ...</div>
+</div>
+
+<div *ngIf="error$ | async" class="flex w-100 h-100 items-center justify-center pt7">
+  <div>An unexpected error occured.</div>
+</div>

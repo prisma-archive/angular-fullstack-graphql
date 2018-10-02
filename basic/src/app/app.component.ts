@@ -1,11 +1,10 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div class="w-100 flex justify-center">
-      <router-outlet></router-outlet>
-    </div>
-  `,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'basic';
+}

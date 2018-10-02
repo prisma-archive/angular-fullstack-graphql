@@ -1,0 +1,12 @@
+<div class="pa4 flex justify-center bg-white">
+  <form [formGroup]="draftForm" (submit)="create()">
+    <h1>Create Draft</h1>
+    <input class="w-100 pa2 mv2 br2 b--black-20 bw1" formControlName="title" placeholder="Title" type="text" />
+    <textarea class="db w-100 ba bw1 b--black-20 pa2 br2 mb2" formControlName="text" cols="50" placeholder="Content"
+      rows="8"></textarea>
+    <button class="pa3 bg-black-10 bn" type="submit">Create</button>
+    <a class="f6 pointer" (click)="goBack()">
+      or cancel
+    </a>
+  </form>
+</div>

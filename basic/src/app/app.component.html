@@ -1,0 +1,20 @@
+<nav class="pa3 pa4-ns">
+  <a class="link dim black b f6 f5-ns dib mr3" router-link="/" title="Feed">
+    Blog
+  </a>
+  <a class="link dim f6 f5-ns dib mr3 black" routerLinkActive="gray" [routerLinkActiveOptions]="{exact: true}"
+    router-link="/" title="Feed">
+    Feed
+  </a>
+  <a class="link dim f6 f5-ns dib mr3 black" activeclass="gray" [routerLinkActiveOptions]="{exact: true}" router-link="/drafts"
+    title="Drafts">
+    Drafts
+  </a>
+  <a router-link="/create" class="f6 link dim br1 ba ph3 pv2 fr mb2 dib black">
+    + Create Draft
+  </a>
+</nav>
+
+<div class="fl w-100 pl4 pr4">
+  <router-outlet></router-outlet>
+</div>
