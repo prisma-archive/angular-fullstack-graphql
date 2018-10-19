@@ -308,15 +308,12 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apollo-angular@0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/apollo-angular/-/apollo-angular-0.13.3.tgz#a94464990132eb70eb77e3b890c50e1cecc2ec7c"
+apollo-angular@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/apollo-angular/-/apollo-angular-1.5.0.tgz#da653b76189fb72ea801c51996ea87fe19aa064f"
   dependencies:
-    apollo-client-rxjs "^0.6.0-rc.1"
-
-apollo-client-rxjs@^0.6.0-rc.1:
-  version "0.6.0-rc.2"
-  resolved "https://registry.yarnpkg.com/apollo-client-rxjs/-/apollo-client-rxjs-0.6.0-rc.2.tgz#f391ee69381ae5ec8f74f476fbb6b0490b6f5923"
+    semver "^5.5.1"
+    tslib "^1.9.0"
 
 apollo-client@1.9.3:
   version "1.9.3"
@@ -4639,6 +4636,10 @@ semver@^5.0.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
+semver@^5.5.1:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
+
 send@0.16.1:
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/send/-/send-0.16.1.tgz#a70e1ca21d1382c11d0d9f6231deb281080d7ab3"
@@ -5234,6 +5235,10 @@ tsickle@^0.21.0:
 tslib@^1.7.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.8.1.tgz#6946af2d1d651a7b1863b531d6e5afa41aa44eac"
+
+tslib@^1.9.0:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tslint@4.5.1:
   version "4.5.1"
